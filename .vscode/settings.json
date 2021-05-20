@@ -1,0 +1,11 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/luqman/ros2_workspace/install/urdf_package/lib/python3.8/site-packages",
+        "/home/luqman/ros2_workspace/install/rrbot_controllers/lib/python3.8/site-packages",
+        "/home/luqman/ros2_workspace/install/my_robot_tutorials/lib/python3.8/site-packages",
+        "/home/luqman/ros2_workspace/install/basic_rera/lib/python3.8/site-packages",
+        "/home/luqman/ros2_workspace/install/autonomous_rover/lib/python3.8/site-packages",
+        "/home/luqman/ros2_foxy/ros2-linux/lib/python3.8/site-packages",
+        "/opt/ros/foxy/lib/python3.8/site-packages"
+    ]
+}
