@@ -1,0 +1,6 @@
+- Your robot is simple pulley with a kart
+    - a caster , 2 rear wheels 
+    - You emphasize on the Inertial, collision values and showed them issues
+
+- you added all sensors ->> but remove them
+- Only show them how to build one car and drive it in gazebo , rviz etc.
