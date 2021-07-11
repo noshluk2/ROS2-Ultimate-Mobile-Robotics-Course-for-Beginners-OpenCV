@@ -4,12 +4,29 @@ import rclpy
 from rclpy.node import Node 
 from cv_bridge import CvBridge 
 from sensor_msgs.msg import Image 
+from geometry_msgs.msg import Twist
 
-class lane_detection_and_following(Node):
+class line_detection_and_following(Node):
     def __init__(self):
         super().__init__('Lane_follower')
         self.subscriber = self.create_subscription(Image,'/camera/image_raw',self.process_data,10)
         self.bridge = CvBridge() # converting ros images to opencv data
+        self.publisher = self.create_publisher(Twist, '/cmd_vel', 40)#periodic publisher call
+        timer_period = 0.2;self.timer = self.create_timer(timer_period, self.send_cmd_vel)
+        self.velocity=Twist()
+        self.error=0;
+        self.action=""
+    def send_cmd_vel(self):
+        self.velocity.linear.x=0.5
+        if(self.error > 0):## go left
+            self.velocity.angular.z=0.15
+            self.action="Go Left"
+        else :## go right
+            self.velocity.angular.z=-0.15
+            self.action="Go Right"
+        self.publisher.publish(self.velocity)
+
+
 
     def process_data(self, data): 
         frame = self.bridge.imgmsg_to_cv2(data) # performing conversion
@@ -47,12 +64,9 @@ class lane_detection_and_following(Node):
         img[160,int(mid_point)]=255
         ### control system to keep the mid point in middle frame
         frame_mid = 639/2
-        error=frame_mid-mid_point 
+        self.error=frame_mid-mid_point 
 
-        if(error > 0):## go left
-            action="Go Left"
-        else :
-            action="Go Right"
+       
 
 
 
@@ -66,7 +80,7 @@ class lane_detection_and_following(Node):
         fontScale = 1
         color = (255,0,255)
         thickness = 2
-        f_image = cv2.putText(img, action, coordinates, font, fontScale, color, thickness, cv2.LINE_AA)
+        f_image = cv2.putText(img, self.action, coordinates, font, fontScale, color, thickness, cv2.LINE_AA)
 
 
 
@@ -81,7 +95,7 @@ class lane_detection_and_following(Node):
 
 def main(args=None):
   rclpy.init(args=args)
-  image_subscriber = lane_detection_and_following()
+  image_subscriber = line_detection_and_following()
   rclpy.spin(image_subscriber)
   rclpy.shutdown()
   

@@ -1,6 +1,6 @@
 <?xml version='1.0'?>
 <sdf version='1.7'>
-  <model name='box'>
+  <model name='road'>
     <link name='link_0'>
       <inertial>
         <mass>1</mass>
@@ -23,15 +23,15 @@
         <pose>0 0 -0.030 0 -0 0</pose>
         <geometry>
           <box>
-            <size>15.5 15 0.05</size>
+            <size>20.5 20 0.05</size>
           </box>
         </geometry>
         <material>
           <lighting>1</lighting>
           <script>
-            <uri>/home/luqman/test_blender_models/box/materials/scripts</uri>
-            <uri>/home/luqman/test_blender_models/box/materials/textures</uri>
-            <name>Box/Diffuse</name>
+            <uri>/home/luqman/test_blender_models/road/materials/scripts</uri>
+            <uri>/home/luqman/test_blender_models/road/materials/textures</uri>
+            <name>road/Diffuse</name>
           </script>
           <shader type='pixel'>
             <normal_map>__default__</normal_map>

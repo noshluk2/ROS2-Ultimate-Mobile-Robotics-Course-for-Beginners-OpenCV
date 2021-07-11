@@ -11,7 +11,8 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        (os.path.join('share', package_name), glob('urdf/*')),
+        (os.path.join('share', package_name), glob('urdf/*.urdf')),
+        (os.path.join('share', package_name), glob('launch/*')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -23,7 +24,7 @@ setup(
     entry_points={
         'console_scripts': [
             'video_saver = prius_line_following.video_save:main',
-            'lane_follower = prius_line_following.lane_following:main',
+            'line_follower = prius_line_following.line_following:main',
             
         ],
     },
