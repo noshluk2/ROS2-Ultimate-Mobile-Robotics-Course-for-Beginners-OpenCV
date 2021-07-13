@@ -1,6 +1,14 @@
-## This code is going to publish on topic "cmd_vel" and subscribe "/scan" topic
+####
+# - Main purpse is Obstical Avoiding by using LIDAR sensor  
+# - Any object comes inside of scan Robot takes sharp turn
+# - This code is going to publish on topic "cmd_vel" and
+#    subscribe "/scan" topic
+#
 #  Written by Muhammad Luqman
-# 8/6/21
+#  ros2,FOXY
+#  13/6/21
+#
+###
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import LaserScan
@@ -17,12 +25,17 @@ class ObstacleAvoidingBot(Node):
         #periodic publisher call
         timer_period = 0.2;self.timer = self.create_timer(timer_period, self.send_cmd_vel)
         ## Initializing Global values
-        self.linear_vel = 0.22 ## given a value
-        self.velocity=Twist()
+        ## given a value for VELOCITY
+        self.linear_vel = 0.22 
+        ## Making dictionary to divide the area of lase scan 
         self.regions={'right':[],'mid':[],'left':[]}
+        ## creating a message object to fit new velocities and publish them
+        self.velocity=Twist()
 
+
+    ## Subscriber Callback function 
     def get_scan_values(self,scan_data):
-        ## We have 360 data points so we divide them in 3 regions
+        ## We have 360 data points and we are dividing them in 3 regions
         ## we say if there is something in the region get the smallest value
         self.regions = {
         'right':   min(min(scan_data.ranges[0:120])  , 100),
@@ -30,16 +43,14 @@ class ObstacleAvoidingBot(Node):
         'left':    min(min(scan_data.ranges[240:360]), 100),
         }
         print(self.regions['left']," / ",self.regions['mid']," / ",self.regions['right'])
-        ## testing defined regions
-        # print("///////left     = ", self.regions['left']) 
-        # print("///////mid      = ", self.regions['mid'])
-        # print("///////right    = ", self.regions['right'])
 
-
-    
-
+  
+    ## Callback Publisher of velocities called every 0.2 seconds
     def send_cmd_vel(self):
+        ## angular and linear velocities are set into object self.velcity
+        ## setting the linear velocity to be fixed and robot will keep on moving
         self.velocity.linear.x=self.linear_vel
+        ## cases to make the robot change its angular velocity
         if(self.regions['left'] > 4  and self.regions['mid'] > 4   and self.regions['right'] > 4 ):
             self.velocity.angular.z=0.0 # condition in which area is total clear
             print("forward")
@@ -54,7 +65,9 @@ class ObstacleAvoidingBot(Node):
             print("reverse")
         else:## lThis code is not completed ->  you have  to add more conditions  ot make it robust
             print("some other conditions are required to be programmed") 
-       # self.publisher.publish(self.velocity)
+       
+        ## lets publish the complete velocity
+        self.publisher.publish(self.velocity)
 
 def main(args=None):
     rclpy.init(args=args)
