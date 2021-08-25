@@ -2,9 +2,11 @@
  This course is going to take your from BASIC ROS2 to Mobile Robotics Domain in Python which can be utilized into Robotics Career oppertunities. Notes are also added as freebies :)
  This repository is for the course [Discounted_coupon_link](https://www.udemy.com/course/ros2-ultimate-mobile-robotics-course-for-beginners-opencv/?couponCode=GITHUB) 
  
- **Notes :** Video lectures with in depth explainations about the projects are provided  in the course. You can view the **free prevew** in the course as well .
+ ![alt text](https://github.com/noshluk2/ROS2-Ultimate-Mobile-Robotics-Course/blob/main/Images/thumbnail.png)
+ 
+ **Note:** Video lectures with in depth explainations about the projects are provided  in the course. You can view the **free preview** in the course as well .
 
-### Topics Covered :
+### Topics Covered 
 - Custom Workspace 
 - Custom Python Packages
 - Custom Python Nodes
@@ -13,14 +15,20 @@
 - Launch files
 - RVIZ2 and Gazebo Simulation Fundamentals 
 - Adding Virtual Sensors to your Robot
-- - Camera
-- - Lidar
-- - Driving Differential Drive Control
+  - Camera
+  - Lidar
+  - Driving Differential Drive Control
 
 #### Process of Explaonation
-##### All Concepts are explained with Notes
-![alt text](https://github.com/HaiderAbasi/SelfDrivingProject_MiniTesla/blob/master/3D%20model%20file/car_building.gif)
-##### Code is then Written and made changes On the Go
+- **All Concepts are explained with Notes**
+![alt text](https://github.com/noshluk2/ROS2-Ultimate-Mobile-Robotics-Course/blob/main/Images/process_explanation.png)
+
+- **Code is then Written and made changes On the Go**
+![alt text](https://github.com/noshluk2/ROS2-Ultimate-Mobile-Robotics-Course/blob/main/Images/code.png)
+
+- **Output is Analyzed**
+![alt text](https://github.com/noshluk2/ROS2-Ultimate-Mobile-Robotics-Course/blob/main/Images/output.png)
+  
   
 ## Projects
 - **Obstacle Avoiding Custom Robots**
