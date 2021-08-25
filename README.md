@@ -1,4 +1,4 @@
-# C++ from Beginners to Object Oriented Data Structures
+# ROS2 Ultimate Mobile Robotics Course for Beginners OpenCV
  This course is going to take your from BASIC ROS2 to Mobile Robotics Domain in Python which can be utilized into Robotics Career oppertunities. Notes are also added as freebies :)
  This repository is for the course [Discounted_coupon_link](https://www.udemy.com/course/ros2-ultimate-mobile-robotics-course-for-beginners-opencv/?couponCode=GITHUB) 
  
