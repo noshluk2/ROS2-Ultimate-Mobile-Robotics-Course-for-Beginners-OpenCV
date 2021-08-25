@@ -1,22 +1,35 @@
-# C++ Begginers to Advanced Course Repository
- This course is going to take your from Beginners to Advance Level Concepts in C++ which can be utilized in many fieldwhere effeciency is required .
- This repository is for the course [HERE](https://www.udemy.com/course/ros2-ultimate-mobile-robotics-course-for-beginners-opencv/?couponCode=GITHUB) , video and in depth explainations about the projects are provided  in the course.
+# C++ from Beginners to Object Oriented Data Structures
+ This course is going to take your from BASIC ROS2 to Mobile Robotics Domain in Python which can be utilized into Robotics Career oppertunities. Notes are also added as freebies :)
+ This repository is for the course [Discounted_coupon_link](https://www.udemy.com/course/ros2-ultimate-mobile-robotics-course-for-beginners-opencv/?couponCode=GITHUB) 
+ 
+ **Notes :** Video lectures with in depth explainations about the projects are provided  in the course. You can view the **free prevew** in the course as well .
 
- ### Topics Covered :
-  - Basic (Varibles / Loops / Functions)
-  - Object Oriented Programming( Structures / Constructers / Classes / Header Files)
-  - Data Structures (Pointers / Linked List / Double Linked List / Trees)
-  - Multi-Threading (Not yet Released)
+### Topics Covered :
+- Custom Workspace 
+- Custom Python Packages
+- Custom Python Nodes
+- Message Publishing Bandwidth and Frequency 
+- Creation of Robot through URDF in XML
+- Launch files
+- RVIZ2 and Gazebo Simulation Fundamentals 
+- Adding Virtual Sensors to your Robot
+- - Camera
+- - Lidar
+- - Driving Differential Drive Control
+
+#### Process of Explaonation
+##### All Concepts are explained with Notes
+![alt text](https://github.com/HaiderAbasi/SelfDrivingProject_MiniTesla/blob/master/3D%20model%20file/car_building.gif)
+##### Code is then Written and made changes On the Go
   
 ## Projects
-- 1 Cinema Ticketing System     ( Section 1: Basics Concepts )
-- 2 Restaurant Ordering Systems ( Section 2: Object Oriented Concepts )
-- 3 School Management System    ( Section 3: Data Structures Concepts ) 
+- **Obstacle Avoiding Custom Robots**
+- **Wall Following Robot**
+- **Line Following Prius Car with Computer Vision**
 
 
 
 ## Instructors
-- **Zaheer Ahmed** [Contact Profile](www.linkedin.com/in/zaheer-ahmed-908a20210/)
 - **Muhammad Luqman** [Contact Profile](https://www.linkedin.com/in/muhammad-luqman-9b227a11b/)
 
 
