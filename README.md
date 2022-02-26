@@ -1,6 +1,6 @@
 # ROS2 Ultimate Mobile Robotics Course for Beginners OpenCV
 - This course is going to take your from BASIC ROS2 to Mobile Robotics Domain in Python which can be utilized into Robotics Career oppertunities. Notes are also added as freebies :)
-- This repository is for the course [Discounted_coupon_link](https://www.udemy.com/course/ros2-ultimate-mobile-robotics-course-for-beginners-opencv/?couponCode=GITHUB) 
+- This repository is for the course [Discounted_coupon_link](https://www.udemy.com/course/ros2-ultimate-mobile-robotics-course-for-beginners-opencv/?couponCode=TEACHMEROS) 
 **Note:** Video lectures with in depth explainations about the projects are provided  in the course. You can view the **free preview** in the course as well .
 
 ![alt text](https://github.com/noshluk2/ROS2-Ultimate-Mobile-Robotics-Course/blob/main/Images/thumbnail.png)
