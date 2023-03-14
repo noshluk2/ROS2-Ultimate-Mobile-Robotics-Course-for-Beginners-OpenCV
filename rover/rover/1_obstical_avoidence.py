@@ -38,9 +38,9 @@ class ObstacleAvoidingBot(Node):
         ## We have 360 data points and we are dividing them in 3 regions
         ## we say if there is something in the region get the smallest value
         self.regions = {
-        'right':   min(min(scan_data.ranges[0:120])  , 100),
-        'mid':     min(min(scan_data.ranges[120:240]), 100),
-        'left':    min(min(scan_data.ranges[240:360]), 100),
+        'right':   int(min(min(scan_data.ranges[0:120])  , 100)),
+        'mid':     int(min(min(scan_data.ranges[120:240]), 100)),
+        'left':    int(min(min(scan_data.ranges[240:360]), 100)),
         }
         print(self.regions['left']," / ",self.regions['mid']," / ",self.regions['right'])
 
